@@ -3,7 +3,7 @@
 
 原型：
 
-	public static WilddogIMClient newInstance(Context context, String WilddogIMAppId, WilddogIMClient.Options options)
+	public static WilddogIMClient newInstance(Context context, String WilddogAppId, WilddogIMClient.Options options)
   
 获取 WilddogIMClient 实例:
 
@@ -12,7 +12,7 @@
 参数 | 说明
 -----|------
 context | 应用的 context
-WilddogIMAppId | 野狗通讯云 
+WilddogAppId | 野狗通讯云 
 AppId | options设置参数
 
 ######示例：
