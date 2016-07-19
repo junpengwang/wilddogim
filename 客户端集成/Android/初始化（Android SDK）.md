@@ -61,7 +61,7 @@ public class MyApp extends Application {
 
 	layerClient.registerAuthenticationListener(this);
 	
-####5 连接 SDK
+####5 和服务器建立连接
 设置监听后，我们就可以连接 SDK 了。
 
 	// 野狗 SDK 和野狗服务器简历连接
