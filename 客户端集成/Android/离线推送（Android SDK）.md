@@ -2,9 +2,9 @@
 
 
 用户断开与野狗服务器的连接的时候，收到的消息将通过push通知的形式展示出来，用户可以自定义点击通知之后的操作。
-##1.首先需要在build.gradle中配置下载push的aar包
+####1.首先需要在build.gradle中配置下载push的aar包
 	compile 'com.wilddog.push:wilddog-push-android:0.0.2-SNAPSHOT'
-##2.配置PushServer去开启推送
+####2.配置PushServer去开启推送
 #####示例：
 ```
 <service
@@ -12,8 +12,8 @@
  android:exported="false"
  android:process=":push" />
  ```
-##3.首先需要配置一个BroadcastReceiver,它的intent-filter中需要配置action为com.wilddog.push.{YOUR_APP_ID}，然后就可以在离线的时候收到推送过来的消息。
-#####示例：
+####3.首先需要配置一个BroadcastReceiver,它的intent-filter中需要配置action为com.wilddog.push.{YOUR_APP_ID}，然后就可以在离线的时候收到推送过来的消息。
+######示例：
 ```
 <receiver
  android:name=".receiver.MyMessageReceiver"
@@ -23,8 +23,8 @@
     </intent-filter>
 </receiver>
 ```
-##4.在onReceive方法中处理结果  data中的数据为推送过来数据
-#####示例：
+####4.在onReceive方法中处理结果  data中的数据为推送过来数据
+######示例：
 ```
 String data = intent.getStringExtra("data");
 if (!TextUtils.isEmpty(data)) {
