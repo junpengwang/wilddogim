@@ -2,7 +2,7 @@
 
 ####1 消息发送
 #####1.1 会话获取
-会话是指面向一个人或者一个群组的对话，发消息时首先需要先获取会话，会话的获取通过 wilddogClient.newConversation() 实现：
+会话是指面向一个人或者一个群组的对话，发消息时首先需要先获取会话，会话的获取通过 WilddogClient.newConversation() 实现：
 ######原型：
 	Conversation newConversation(List<String> members)
 ######参数说明
@@ -17,7 +17,7 @@ members|用户 id 列表
 Conversation conversation;
 try {
    // 创建一对一聊天
-   conversation = wilddogIMClient.newConversation(Arrays.asList("USER-IDENTIFIER"));
+   conversation = WilddogIMClient.newConversation(Arrays.asList("USER-IDENTIFIER"));
 } catch (WilddogConversationException e) {
    // 如果已经存在，会返回已有的 conversation
    conversation = e.getConversation();
@@ -186,7 +186,7 @@ public long getSendAt()
 ######原型：
 	public List<Conversation> getConversations()
 ######示例：
-	List<Conversation> conversations = wilddogClient.getConversations();
+	List<Conversation> conversations = WilddogClient.getConversations();
 	
 #####4.2 获取会话本地消息
 通过 Conversation 中的 getMessage 方法可以获取本地历史消息，可以实现分页拉取。此方法为同步方法:

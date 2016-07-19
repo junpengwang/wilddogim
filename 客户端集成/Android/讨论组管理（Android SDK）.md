@@ -15,8 +15,8 @@ members	| 讨论组成员 id 列表
 Conversation conversation;
 try {
    // 以三个成员建立一个讨论组
-   conversation = wilddogClient.newConversation(Arrays.asList("USER-IDENTIFIER1","USER-IDENTIFIER2","USER-IDENTIFIER3"));
-} catch (WilddogConversationException e) {
+   conversation = WilddogIMClient.newConversation(Arrays.asList("USER-IDENTIFIER1","USER-IDENTIFIER2","USER-IDENTIFIER3"));
+} catch (WilddogIMConversationException e) {
    // 如果已经有一个成员列表一样的讨论组，则返回已有会话。
    conversation = e.getConversation();
 }
@@ -62,10 +62,10 @@ getMembers 方法可以获取讨论组成员列表，任何讨论组成员都有
 	List<String> members = conversation.getMembers();
 
 ####5 讨论组事件消息
-当讨论组内有资料或成员变更时，需要注册讨论组资料变更监听事件。讨论组的信息变更会通知讨论组内所有成员。
+当讨论组内有资料或成员变更时，需要注册讨论组资料变更监听事件。
 ######示例：
 ```
-wilddogIMClient.registerGroupChangeListener(this);
+WilddogIMIMClient.registerGroupChangeListener(this);
 ```
 ####5.1 用户加入讨论组通知
 ######示例：
