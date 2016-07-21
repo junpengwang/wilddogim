@@ -1,10 +1,10 @@
 ###离线推送 
 
 
-用户断开与野狗服务器的连接的时候，收到的消息将通过push通知的形式展示出来，用户可以自定义点击通知之后的操作。
-####1.首先需要在build.gradle中配置下载push的aar包
+用户断开与野狗服务器的连接的时候，收到的消息将通过 push 通知的形式展示出来，用户可以自定义点击通知之后的操作。
+####1.首先需要在 build.gradle 中配置下载 push 的 aar 包
 	compile 'com.wilddog.push:wilddog-push-android:0.0.2-SNAPSHOT'
-####2.配置PushServer去开启推送
+####2.配置 PushServer 去开启推送
 #####示例：
 ```
 <service
@@ -12,7 +12,7 @@
  android:exported="false"
  android:process=":push" />
  ```
-####3.首先需要配置一个BroadcastReceiver,它的intent-filter中需要配置action为com.wilddog.push.{YOUR_APP_ID}，然后就可以在离线的时候收到推送过来的消息。
+####3.首先需要配置一个 BroadcastReceiver,它的 intent-filter 中需要配置 action 为 com.wilddog.push.{YOUR_APP_ID}，然后就可以在离线的时候收到推送过来的消息。
 ######示例：
 ```
 <receiver
@@ -23,7 +23,7 @@
     </intent-filter>
 </receiver>
 ```
-####4.在onReceive方法中处理结果  data中的数据为推送过来数据
+####4.在 onReceive 方法中处理结果 data 中的数据为推送过来数据
 ######示例：
 ```
 String data = intent.getStringExtra("data");
