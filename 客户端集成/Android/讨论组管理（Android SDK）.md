@@ -1,5 +1,14 @@
 
 ###讨论组管理 
+* 1 创建讨论组
+* 2 邀请用户入讨论组 
+* 3 删除讨论组成员
+* 4 获取讨论组成员列表
+* 5 讨论组事件消息
+ * 5.1 用户加入讨论组通知
+ * 5.2 用户退出讨论组通知 
+ * 5.3 用户被踢出讨论组通知
+
 
 ####1 创建讨论组
 野狗 IM 服务不严格区分单聊和讨论组，创建会话时，当会话成员为 2 个时，则为单聊。当大于 2 个时则自动升级为讨论组，可通过 newConvesation 来创建讨论组，目前创建的讨论组是根据成员来确定唯一性：
@@ -68,7 +77,7 @@ getMembers 方法可以获取讨论组成员列表，任何讨论组成员都有
 ```
 WilddogIMIMClient.registerGroupChangeListener(this);
 ```
-####5.1 用户加入讨论组通知
+#####5.1 用户加入讨论组通知
 ######示例：
 ```
 void memberJoined(String groupId, String operateUser, String operatedUsers) {
@@ -76,7 +85,7 @@ void memberJoined(String groupId, String operateUser, String operatedUsers) {
 }	
 ```
 
-####5.2 用户退出讨论组通知
+#####5.2 用户退出讨论组通知
 ######示例：
 ```
 void memberQuit(String groupId) {
@@ -84,7 +93,7 @@ void memberQuit(String groupId) {
 }
 ```
 
-####5.3 用户被踢出讨论组通知
+#####5.3 用户被踢出讨论组通知
 ######示例：
 ```
 void memberRemoved(String groupId String operatedUsers) {
