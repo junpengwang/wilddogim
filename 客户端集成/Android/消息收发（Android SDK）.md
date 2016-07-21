@@ -1,7 +1,27 @@
 
 ### 消息收发 
+* 1 发送消息
+ * 1.1 会话获取
+ * 1.2 创建文本消息
+ * 1.3 创建图片消息
+ * 1.4 创建语音消息 
+ * 1.5 发送消息
+* 2 接收消息
+ * 2.1 注册监听
+ * 2.2 消息解析
+* 3 消息属性
+ * 3.1 消息状态
+ * 3.2 消息时间
+ * 3.3 消息 ID
+ * 3.4 消息发送者
+ * 3.5 消息删除
+* 4 会话操作
+ * 4.1 获取所有会话
+ * 4.2 获取会话本地消息
+ * 4.3 删除会话
 
-####1 消息发送
+
+####1 发送消息
 #####1.1 会话获取
 会话是指面向一个人或者一个群组的对话，发消息时首先需要先获取会话，会话的获取通过 WilddogClient.newConversation() 实现：
 ######原型：
@@ -74,7 +94,7 @@ ImageMessage message = Message.newMessage(Message.Type.IMAGE, imageData);
 ImageMessage message = Message.newMessage(Message.Type.VOICE, voiceData);
 ```
 
-#####1.5. 发送消息：
+#####1.5 发送消息：
 
 ######示例：
 
