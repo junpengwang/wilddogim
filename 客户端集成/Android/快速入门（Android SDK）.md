@@ -42,4 +42,11 @@ layerClient.connect();
 
 ```
 ######4.3 用户登录
+```
+ @Override
+ // 当连接创建成功后将会被调用
+ public void onConnectionConnected(WilddogIMClient WilddogIMClient) {
+     WilddogIMClient.authenticate(token);
+ }
+ ```
 ####5 发起聊天
