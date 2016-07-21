@@ -27,4 +27,19 @@ dependencies {
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 ####4 初始化
+######4.1 初始化 SDK
+```
+// Create a LayerClient ready to receive push notifications through GCM
+LayerClient layerClient = LayerClient.newInstance(context, "APP ID",
+    new LayerClient.Options().googleCloudMessagingSenderId("GCM Project Number"));
+
+```
+######4.2 建立连接
+```
+layerClient.registerConnectionListener(this)
+// Asks the LayerSDK to establish a network connection with the Layer service
+layerClient.connect();
+
+```
+######4.3 用户登录
 ####5 发起聊天
