@@ -59,8 +59,30 @@ String messageText = "Hi! How are you";
 TextMessage message = Message.newMessage(messageText);
 conversation.send(message);
 ```
-####6 接受消息
+####6 接收消息
 ```
+// 注册接收监听
 client.registerMessageListener(this);
 
+//实现监听方法
+public void onNewMessage(List<Message> messages) {
+    for (Message message : messages){
+
+        switch (message.getMessageType()) {
+
+            case TEXT:
+            //文本消息
+            TextMessage textMessage = (TextMessage)message;
+
+            case IMAGE:
+            //图片消息
+            ImageMessage imageMessage = (ImageMessage)message;
+
+            case VOICE:
+            //语音消息
+            VoiceMessage voiceMessage = (VoiceMessage)message;
+
+        }
+    }
+}
 ```
