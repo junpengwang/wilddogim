@@ -7,7 +7,7 @@
 * 5 和服务器建立连接
 
 ####1 初始化 SDK
-野狗 IM 解决方案的主要入口为 WilddogIMClient，一切操作都从此入口开始。SDK 操作第一步需要创建 WilddogIMClient 单例：
+野狗 IM 解决方案的主要入口为 WilddogIMClient，一切操作都从此入口开始。SDK 操作第一步需要创建 WilddogIMClient：
 
 原型：
 
@@ -24,7 +24,7 @@ WilddogAppId | 野狗通讯云
 
 ######示例：
 
-	WilddogIMClient WilddogIMClient = WilddogIMClient.newInstance(context, "APP ID");
+	WilddogIMClient client = WilddogIMClient.newInstance(context, "APP ID");
 	
 ####2 应用状态
 为了 WilddogIMClient 能管理网络连接和获取通知状态，我们需要在 Application.onCreate() 方法中调用 WilddogIMClient.applicationCreated(app)。
