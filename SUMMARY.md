@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [概述](README.md)
 * [客户端集成](客户端集成)
    * Android
     * [快速入门（Android SDK](客户端集成/Android/快速入门（Android SDK）.md)
