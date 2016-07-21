@@ -1,12 +1,16 @@
 
 ###初始化
-
-####1 获取通讯管理器
+* 1 初始化 SDK
+* 2 应用状态
+* 3 连接状态监听
+* 4 用户登录状态监听
+* 5 和服务器建立连接
+####1 初始化 SDK
 野狗聊天服务的主要入口为 WilddogIMClient，一切操作都从此入口开始。SDK 操作第一步需要创建 WilddogIMClient 单例：
 
 原型：
 
-	public static WilddogIMClient newInstance(Context context, String WilddogAppId, WilddogIMClient.Options options)
+	public static WilddogIMClient newInstance(Context context, String WilddogAppId)
   
 获取 WilddogIMClient 实例:
 
@@ -16,11 +20,10 @@
 -----|------
 context | 应用的 context
 WilddogAppId | 野狗通讯云 
-AppId | options设置参数
 
 ######示例：
 
-	WilddogIMClient WilddogIMClient = WilddogIMClient.newInstance(context, "APP ID",new WilddogIMClient.Options());
+	WilddogIMClient WilddogIMClient = WilddogIMClient.newInstance(context, "APP ID");
 	
 ####2 应用状态
 为了 WilddogIMClient 能管理网络连接和获取通知状态，我们需要在 Application.onCreate() 方法中调用 WilddogIMClient.applicationCreated(app)。
