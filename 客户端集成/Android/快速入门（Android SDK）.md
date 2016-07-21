@@ -20,7 +20,7 @@
 
 ####2 前置准备
 ######2.1 创建 Wilddog 应用
-野狗 IM 解决方案聊天数据都存在野狗云上，所以在集成 IM 解决方案前，需要先创建 Wilddog 应用来获取 Wilddog AppID。
+野狗 IM 解决方案是以野狗实时后端云为基础开发的，所以在集成 IM 解决方案前，需要先创建 Wilddog 应用来获取 Wilddog AppID。
 
 进入野狗官网[首页](https://www.wilddog.com)，登录野狗帐号，如果没有野狗帐号请先注册，进入控制面板，输入应用名称和应用 ID，点击添加应用。就能生成野狗应用。关于更多创建野狗帐号的信息请参考 [创建应用](https://z.wilddog.com/overview/app)
 
