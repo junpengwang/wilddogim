@@ -61,5 +61,6 @@ conversation.send(message);
 ```
 ####6 接受消息
 ```
+client.registerMessageListener(this);
 
 ```
