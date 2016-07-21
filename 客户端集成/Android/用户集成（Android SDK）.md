@@ -1,4 +1,4 @@
- 
+###用户集成 
 
 ####1 获取 Token
 野狗 IM 服务不开发独立的用户系统，为了集成 APP 已有的用户，我们通过自定义 Token 的方式。开发者需要将 APP 已有的用户 ID，用户名称，用户头像等信息结合野狗的超级密钥生成 [JWT Token](https://jwt.io/)，在登录野狗 IM 服务前，需要请求 APP Server 来获取这个 JWT Token 才能进入下一步登录操作。关于更多自定义 Token 和野狗超级密钥等信息请参考 [自定义 Token](https://z.WilddogIM.com/rule/guide#5-zi-ding-yi-token0)。
@@ -6,7 +6,7 @@
 获取 Token 后，调用登录接口就可以正常收发消息了。登录为异步过程，通过回调函数返回是否成功，成功后方能进行后续操作。
 #####原型：
 	WilddogIMClient authenticate(String token)
-####参数说明
+######参数说明
 参数	| 说明
 ----|----
 token | 由 App 服务器生产的 jwt token

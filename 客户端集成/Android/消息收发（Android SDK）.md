@@ -1,4 +1,5 @@
- 
+
+### 消息收发 
 
 ####1 消息发送
 #####1.1 会话获取
@@ -78,9 +79,10 @@ ImageMessage message = Message.newMessage(Message.Type.VOICE, voiceData);
 ######示例：
 
 ``` 
-// 发送一条消息
+// 发送一条消息，没有回调，可以根据 message.getStatus() 来获取消息的状态。
 conversation.send(message);
 
+// 带回调方法的消息发送接口，可以知道消息发送的详细进度。
 conversation.send(message, new WilddogIMProgressListener() {
 	@Override
     public void onProgressStart(MessagePart messagePart, Operation operation) {

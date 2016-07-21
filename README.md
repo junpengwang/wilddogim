@@ -1,5 +1,9 @@
-First commit.
-=======
-# My Awesome Book
+###产品概述
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+* 1 简介
+* 2 架构介绍
+* 3 业务介绍
+  * 3.1 单聊
+  * 3.2 讨论组
+  * 3.3 账号登录集成
+  * 3.4 离线推送系统

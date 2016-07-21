@@ -1,3 +1,6 @@
+
+###初始化
+
 ####1 获取通讯管理器
 野狗聊天服务的主要入口为 WilddogIMClient，一切操作都从此入口开始。SDK 操作第一步需要创建 WilddogIMClient 单例：
 
