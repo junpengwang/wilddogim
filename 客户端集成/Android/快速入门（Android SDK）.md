@@ -28,20 +28,22 @@ dependencies {
 ```
 ####4 初始化
 ######4.1 初始化 SDK
+在一切操作之前，必须先进行一次初始化，设置 Wilddog AppID 和 AndroidContext。可以在 onCreate 方法中设置。
 ```
-// Create a LayerClient ready to receive push notifications through GCM
-LayerClient layerClient = LayerClient.newInstance(context, "APP ID",
-    new LayerClient.Options().googleCloudMessagingSenderId("GCM Project Number"));
+WilddogIMClient wilddogIMClient = WilddogIMClient.newInstance(context, "APP ID");
 
 ```
 ######4.2 建立连接
+野狗 IM 解决方案会和野狗服务器建立一个长连接，以达到能实时接收消息的目的。你可以通过 registerConnectionListener 方法来监听连接状态。调用 connect() 方法来建立连接。
 ```
-layerClient.registerConnectionListener(this)
-// Asks the LayerSDK to establish a network connection with the Layer service
+// 监听连接状态
+wilddogIMClient.registerConnectionListener(this)
+// 和野狗服务器建立连接
 layerClient.connect();
 
 ```
 ######4.3 用户登录
+一般 APP 都会有自己的用户系统，野狗通过 JWT Token 的方式来集成 APP 已有用户。更多信息请参考 [用户集成章节]()
 ```
  @Override
  // 当连接创建成功后将会被调用
@@ -50,7 +52,14 @@ layerClient.connect();
  }
  ```
 ####5 发起聊天
+聊天分为单聊和讨论组，野狗 IM 解决方案不严格区分它们，当聊天人数超过两个人时则自动升级为讨论组，但是不可逆。
 ```
+Conversation conversation = wilddogIMClient.newConversation(Array.asList("user id"));
 String messageText = "Hi! How are you";
 TextMessage message = Message.newMessage(messageText);
+conversation.send(message);
+```
+####6 接受消息
+```
+
 ```
