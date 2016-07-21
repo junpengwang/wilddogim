@@ -7,7 +7,7 @@
 * 5 和服务器建立连接
 
 ####1 初始化 SDK
-野狗聊天服务的主要入口为 WilddogIMClient，一切操作都从此入口开始。SDK 操作第一步需要创建 WilddogIMClient 单例：
+野狗 IM 解决方案的主要入口为 WilddogIMClient，一切操作都从此入口开始。SDK 操作第一步需要创建 WilddogIMClient 单例：
 
 原型：
 
