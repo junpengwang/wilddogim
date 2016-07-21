@@ -50,3 +50,7 @@ layerClient.connect();
  }
  ```
 ####5 发起聊天
+```
+String messageText = "Hi! How are you";
+TextMessage message = Message.newMessage(messageText);
+```
