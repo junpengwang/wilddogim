@@ -51,10 +51,10 @@ public class MyApp extends Application {
 
 ######原型：
 
-	WilddogIMClient registerConnectionListener(WilddogIMConnectionListener listener)
+	client registerConnectionListener(WilddogIMConnectionListener listener)
 	
 ######示例：
-	layerClient.registerConnectionListener(this)
+	client.registerConnectionListener(this)
 	
 ####4 用户登录状态监听
 
@@ -62,14 +62,14 @@ public class MyApp extends Application {
 
 ######原型：
 
-	WilddogIMClient registerAuthenticationListener(WilddogIMAuthenticationListener listener)
+	client registerAuthenticationListener(WilddogIMAuthenticationListener listener)
 	
 ######示例：
 
-	layerClient.registerAuthenticationListener(this);
+	client.registerAuthenticationListener(this);
 	
 ####5 和服务器建立连接
-设置监听后，我们就可以连接 SDK 了。
+设置监听后，我们可以通过 WilddogIMClient 中的 connect() 方法来和服务器建立连接。
 
 	// 野狗 SDK 和野狗服务器简历连接
-	layerClient.connect();
+	client.connect();
