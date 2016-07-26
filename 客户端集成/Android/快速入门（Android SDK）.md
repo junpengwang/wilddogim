@@ -53,7 +53,7 @@ WilddogIMClient wilddogIMClient = WilddogIMClient.newInstance(context, "APP ID")
 // 监听连接状态
 wilddogIMClient.registerConnectionListener(this)
 // 和野狗服务器建立连接
-layerClient.connect();
+wilddogIMClient.connect();
 
 ```
 ######4.3 用户登录
@@ -68,7 +68,7 @@ layerClient.connect();
 ####5 发起聊天
 聊天分为单聊和讨论组，野狗 IM 解决方案不严格区分它们，当聊天人数超过两个人时则自动升级为讨论组，但是不可逆。
 ```
-Conversation conversation = wilddogIMClient.newConversation(Array.asList("user id"));
+Conversation conversation = WilddogIMClient.newConversation(Array.asList("user id"));
 String messageText = "Hi! How are you";
 TextMessage message = Message.newMessage(messageText);
 conversation.send(message);
