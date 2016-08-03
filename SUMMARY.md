@@ -20,3 +20,10 @@
     * [离线推送（iOS SDK）](客户端集成/iOS/离线推送.md)
 
    * Web
+    * [快速入门（iOS SDK）](客户端集成/iOS/快速入门.md)
+    * [初始化（iOS SDK）](客户端集成/iOS/初始化.md)
+    * [用户集成（iOS SDK）](客户端集成/iOS/用户集成.md)
+    * [消息收发（iOS SDK）](客户端集成/iOS/消息收发.md)
+    * [未读消息计数（iOS SDK）](客户端集成/iOS/未读消息计数.md)
+    * [讨论组管理（iOS SDK）](客户端集成/iOS/讨论组管理.md)
+    * [离线推送（iOS SDK）](客户端集成/iOS/离线推送.md)
